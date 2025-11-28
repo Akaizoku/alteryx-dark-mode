@@ -1,0 +1,8 @@
+<CustomizationTheme MergeId="GS_CustomizationTheme">LightMode</CustomizationTheme>
+<DocumentBGColor name="White" MergeId="GS_DocumentBGColor" />
+<DocumentLineColor r="97" g="97" b="97" MergeId="GS_DocumentLineColor" />
+<DocumentLineTextColor name="Black" MergeId="GS_DocumentLineTextColor" />
+<DocumentGridColor name="Gray" MergeId="GS_DocumentGridColor" />
+<DefaultContainerColor r="236" g="242" b="242" MergeId="GS_DefaultContainerColor" />
+<AnnBGColor r="255" g="255" b="255" MergeId="GS_AnnBGColor" />
+<AnnTextColor name="Gray" MergeId="GS_AnnTextColor" />
