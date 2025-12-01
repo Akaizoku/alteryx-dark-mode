@@ -5,23 +5,6 @@
     .DESCRIPTION
     Switch Alteryx Designer theme between light and dark modes by updating UserSettings.xml configuration file.
 
-    The script:
-    - Detects if AlteryxGui.exe (Alteryx Designer) is running
-        - If running, asks the user whether to close it
-        - If user declines, script aborts
-        - If user confirms, Designer is closed and executable path captured
-    - Idendify UserSettings.xml path
-        - Finds all version subfolders under %APPDATA%\Alteryx\Engine
-        - Sorts them in ascending order by name and selects the last one
-        - Uses the UserSettings.xml in that folder as the target
-    - Loads template XML fragment from light.xml or dark.xml
-        - Wraps the fragment with a synthetic root element
-    - Update UserSettings.xml
-        - <CustomizationTheme> inner text
-        - All attributes of specific nodes (except MergeId) from template to target
-        - MergeId attributes in the target XML are preserved.
-    - If Designer was closed by the script, proposes to restart it at the end
-
     .PARAMETER Mode
     Theme mode to apply. Valid values are 'Light' or 'Dark'.
 
@@ -30,6 +13,15 @@
 
     .EXAMPLE
     .\Set-AlteryxTheme.ps1 -Mode Light
+
+    .NOTES
+    File name:      Set-AlteryxTheme.ps1
+    Author:         Florian Carrier
+    Creation date:  2025-11-28
+    Last modified:  2025-12-01
+
+    .LINK
+    https://github.com/Akaizoku/alteryx-dark-mode
 #>
 
 [CmdletBinding()]
