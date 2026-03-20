@@ -9,16 +9,16 @@
     Theme mode to apply. Valid values are 'Light' or 'Dark'.
 
     .EXAMPLE
-    .\Set-AlteryxTheme.ps1 -Mode Dark
+    .\Set-AlteryxTheme.ps1 -Mode "Dark"
 
     .EXAMPLE
-    .\Set-AlteryxTheme.ps1 -Mode Light
+    .\Set-AlteryxTheme.ps1 -Mode "Light"
 
     .NOTES
     File name:      Set-AlteryxTheme.ps1
     Author:         Florian Carrier
     Creation date:  2025-11-28
-    Last modified:  2025-12-01
+    Last modified:  2026-03-20
 
     .LINK
     https://github.com/Akaizoku/alteryx-dark-mode
@@ -26,8 +26,12 @@
 
 [CmdletBinding()]
 param (
-    [Parameter(Mandatory = $true)]
+    [Parameter(
+        Mandatory   = $true,
+        HelpMessage = "Colour scheme to apply"
+    )]
     [ValidateSet('Dark', 'Light')]
+    [Alias ("Theme")]
     [string] $Mode
 )
 
